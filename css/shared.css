@@ -1,0 +1,211 @@
+/* Shared styles used across all pages */
+
+/* ── Top Bar ── */
+.topbar {
+    background: #c80064;
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 0.4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.topbar-left, .topbar-right { display: flex; gap: 1.2rem; align-items: center; }
+.topbar span i { margin-right: 0.3rem; }
+
+/* ── Header ── */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.9rem 3rem;
+}
+.header-inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+.logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.logo-icon {
+    background: #c80064;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.logo-main { font-weight: 700; font-size: 1.2rem; color: #222; letter-spacing: 1px; }
+.logo-sub  { font-size: 0.68rem; color: #999; letter-spacing: 0.5px; text-transform: uppercase; }
+
+.nav { display: flex; justify-content: center; }
+.nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+.nav ul li a {
+    text-decoration: none; color: #444; font-weight: 600;
+    font-size: 0.9rem; transition: color 0.3s; padding-bottom: 2px;
+}
+.nav ul li a.active { color: #c80064; border-bottom: 2px solid #c80064; }
+.nav ul li a:hover  { color: #c80064; }
+
+.btn-book {
+    background: #c80064; color: #fff;
+    padding: 0.55rem 1.3rem; border-radius: 6px;
+    text-decoration: none; font-weight: 700; font-size: 0.9rem;
+    white-space: nowrap; transition: background 0.3s;
+}
+.btn-book:hover, .btn-book.active { background: #a00050; }
+
+/* ── Page Hero (pink banner) ── */
+.page-hero {
+    background: linear-gradient(135deg, #c80064 0%, #e8006e 100%);
+    padding: 3.5rem 3rem;
+    color: #fff;
+}
+.page-hero-content h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.4rem; }
+.page-hero-content p  { font-size: 0.95rem; opacity: 0.9; }
+.breadcrumb { font-size: 0.85rem; opacity: 0.85; }
+
+/* ── Footer ── */
+.footer {
+    background: #1a1f2e;
+    color: #aaa;
+    padding: 3rem 3rem 0;
+    font-size: 0.88rem;
+}
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #2a2f3e;
+}
+.footer-brand .footer-logo { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+.footer-brand .logo-main { color: #fff; font-size: 1.1rem; }
+.footer-brand .logo-sub  { color: #aaa; }
+.footer-brand p { color: #aaa; line-height: 1.7; margin-bottom: 1.2rem; }
+
+.footer .social-icons { display: flex; gap: 0.6rem; margin-top: 0.5rem; }
+.footer .social-icons a {
+    background: #c80064; color: #fff;
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    flex-shrink: 0;
+}
+.footer .social-icons a:hover { background: #fff; color: #c80064; transform: scale(1.1); }
+
+.footer-col h4 { color: #fff; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul li { margin-bottom: 0.6rem; color: #aaa; display: flex; align-items: flex-start; gap: 0.5rem; }
+.footer-col ul li i { color: #c80064; font-size: 0.6rem; margin-top: 5px; flex-shrink: 0; }
+.footer-col ul li a { color: #aaa; text-decoration: none; transition: color 0.3s; }
+.footer-col ul li a:hover { color: #c80064; }
+
+.contact-list li { display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 0.8rem; }
+.contact-list li i { color: #c80064; margin-top: 3px; flex-shrink: 0; font-size: 0.9rem; }
+
+.footer-bottom {
+    max-width: 1300px; margin: 0 auto;
+    padding: 1.2rem 0;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.5rem;
+    font-size: 0.8rem; color: #555;
+}
+.footer-bottom-links { display: flex; gap: 1.5rem; }
+.footer-bottom-links a { color: #555; text-decoration: none; transition: color 0.3s; }
+.footer-bottom-links a:hover { color: #c80064; }
+
+/* ── Hamburger button (hidden on desktop) ── */
+.menu-toggle {
+    display: none;
+    background: none; border: none;
+    cursor: pointer; padding: 0.3rem;
+    flex-direction: column; gap: 5px;
+}
+.menu-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: #c80064; border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+    .footer-container { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .header-inner { grid-template-columns: auto 1fr auto; }
+    .topbar-right { display: none; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+    .topbar { flex-direction: column; text-align: center; font-size: 0.72rem; padding: 0.4rem 1rem; gap: 0.3rem; }
+    .topbar-left { gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+    .topbar-right { display: none; }
+
+    .header { padding: 0.7rem 1rem; }
+    .header-inner {
+        grid-template-columns: 1fr auto auto;
+        gap: 0.8rem;
+    }
+
+    /* Show hamburger, hide nav by default */
+    .menu-toggle { display: flex; }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        padding: 1rem 1.5rem;
+        z-index: 200;
+    }
+    .nav.open { display: block; }
+    .nav ul { flex-direction: column; gap: 0; }
+    .nav ul li a {
+        display: block; padding: 0.75rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+    }
+    .nav ul li:last-child a { border-bottom: none; }
+    .btn-book { padding: 0.45rem 0.9rem; font-size: 0.8rem; }
+
+    .page-hero { padding: 2rem 1.2rem; }
+    .page-hero-content h1 { font-size: 1.6rem; }
+    .page-hero-content p  { font-size: 0.85rem; }
+
+    .footer { padding: 2rem 1.2rem 0; }
+    .footer-container { grid-template-columns: 1fr; gap: 1.5rem; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 0.8rem; }
+    .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+}
+
+/* ── Floating WhatsApp Button ── */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #25d366;
+    color: #fff;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+    z-index: 999;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 28px rgba(37,211,102,0.6);
+}

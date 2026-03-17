@@ -1,0 +1,78 @@
+@import url('shared.css');
+
+.services-section {
+    background: #f9f9f9;
+    padding: 4rem 3rem;
+}
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.service-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(200,0,100,0.15);
+}
+
+.service-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.service-img-wrap img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.service-card:hover .service-img-wrap img { transform: scale(1.08); }
+
+.service-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%);
+    pointer-events: none;
+}
+.price-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: #c80064; color: #fff;
+    font-weight: 700; font-size: 0.85rem;
+    padding: 0.3rem 0.85rem; border-radius: 20px;
+    z-index: 1;
+    box-shadow: 0 3px 10px rgba(200,0,100,0.4);
+}
+.service-body { padding: 1.2rem 1.4rem 1.4rem; }
+.service-body h3 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 0.3rem; }
+.duration { font-size: 0.8rem; color: #888; margin-bottom: 0.8rem; }
+.duration i { margin-right: 0.3rem; color: #c80064; }
+
+.service-features { list-style: none; padding: 0; margin: 0 0 1.2rem; }
+.service-features li { font-size: 0.85rem; color: #555; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+.service-features li i { color: #c80064; font-size: 0.75rem; }
+
+.btn-book-service {
+    display: block; text-align: center;
+    background: #c80064; color: #fff;
+    padding: 0.65rem 1rem; border-radius: 6px;
+    text-decoration: none; font-weight: 700; font-size: 0.9rem;
+    transition: background 0.3s;
+}
+.btn-book-service:hover { background: #a00050; }
+
+@media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .services-section { padding: 2rem 1rem; }
+    .service-body h3 { font-size: 1rem; }
+}
