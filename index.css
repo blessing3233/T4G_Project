@@ -86,7 +86,7 @@
 .hero {
     position: relative;
     min-height: 600px;
-    background: url('../images/gh.jfif') center center/cover no-repeat;
+    background: url('./images/gh.jfif') center center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 5rem 0;
