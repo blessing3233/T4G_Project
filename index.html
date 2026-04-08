@@ -262,14 +262,20 @@
         const nav = document.querySelector('.nav');
         toggle.addEventListener('click', () => nav.classList.toggle('open'));
 
-        // Welcome popup
-        window.addEventListener('DOMContentLoaded', function() {
-            const overlay = document.getElementById('welcomeOverlay');
-            function closeWelcome() { overlay.style.display = 'none'; }
-            document.getElementById('welcomeClose').addEventListener('click', closeWelcome);
-            document.getElementById('welcomeExplore').addEventListener('click', closeWelcome);
-            overlay.addEventListener('click', function(e) { if (e.target === overlay) closeWelcome(); });
-        });
+        // Welcome popup - direct, no DOMContentLoaded needed (script is at bottom)
+        const overlay = document.getElementById('welcomeOverlay');
+        const closeBtn = document.getElementById('welcomeClose');
+        const exploreBtn = document.getElementById('welcomeExplore');
+
+        function closeWelcome() {
+            overlay.style.display = 'none';
+        }
+
+        closeBtn.onclick = closeWelcome;
+        exploreBtn.onclick = closeWelcome;
+        overlay.onclick = function(e) {
+            if (e.target === overlay) closeWelcome();
+        };
     </script>
     <script>
         if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
