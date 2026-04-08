@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOM Nail Studio</title>
     <link rel="stylesheet" href="./index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" type="image/svg+xml" href="./icons/icon.svg">
@@ -16,26 +16,60 @@
 </head>
 <body>
 
+    <!-- Welcome Popup -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-modal">
+            <div class="welcome-modal-top">
+                <div class="welcome-logo">
+                    <span class="wlogo-icon">G</span>
+                    <div>
+                        <span class="wlogo-main">GLOM</span>
+                        <span class="wlogo-sub">Nail Studio</span>
+                    </div>
+                </div>
+                <button class="welcome-close" id="welcomeClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="welcome-modal-body">
+                <p class="welcome-tag">✦ Accra's Premier Nail Studio ✦</p>
+                <h2>Welcome to <span class="welcome-highlight">GLOM</span></h2>
+                <p class="welcome-desc">Where every visit leaves you polished, confident, and glowing.</p>
+                <div class="welcome-perks">
+                    <span><i class="fa-solid fa-circle-check"></i> Premium products</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Expert technicians</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Open 7 days</span>
+                </div>
+                <div class="welcome-actions">
+                    <a href="./pages/booking.html" class="btn-welcome-book">Book Now &rarr;</a>
+                    <button class="btn-welcome-explore" id="welcomeExplore">Explore First</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
     <div class="topbar">
         <div class="topbar-left">
             <span><i class="fa-solid fa-phone"></i> +233535250605</span>
             <span><i class="fa-solid fa-envelope"></i> gladysasieduaamoah@gmail.com</span>
         </div>
         <div class="topbar-right">
-            <span><i class="fa-solid fa-clock"></i> Opening Hours: Mon-Sat 9AM - 6PM | Sun 10AM - 4PM</span>
+            <span><i class="fa-solid fa-clock"></i> Mon–Sat 9AM–6PM &nbsp;|&nbsp; Sun 10AM–4PM</span>
         </div>
     </div>
 
+    <!-- Header -->
     <header class="header">
         <div class="header-inner">
-            <div class="logo">
+            <a href="./index.html" class="logo">
                 <span class="logo-icon">G</span>
                 <div class="logo-text">
                     <span class="logo-main">GLOM</span>
                     <span class="logo-sub">Nail Studio</span>
                 </div>
-            </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="nav">
                 <ul>
                     <li><a href="./index.html" class="active">Home</a></li>
@@ -50,142 +84,107 @@
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="welcome">WELCOME TO GLOM NAIL STUDIO</p>
-            <span class="hero-kicker">Elegant nail care for every occasion</span>
-            <h1>Where Beauty Meets <span class="highlight">Excellence</span></h1>
-            <p class="hero-sub">Professional nail care, elegant finishes, and a calm studio experience that leaves every client polished and confident.</p>
-            <div class="hero-highlights">
-                <span><i class="fa-solid fa-circle-check"></i> Hygienic tools</span>
-                <span><i class="fa-solid fa-circle-check"></i> Skilled technicians</span>
-                <span><i class="fa-solid fa-circle-check"></i> Premium finishes</span>
-            </div>
+            <p class="hero-eyebrow"><span></span> Accra, Ghana <span></span></p>
+            <h1>Where Beauty Meets<br><em>Excellence</em></h1>
+            <p class="hero-sub">Premium nail care. Elegant finishes. Every time.</p>
             <div class="hero-buttons">
-                <a href="./pages/booking.html" class="btn-primary">Book Your Appointment &rarr;</a>
-                <a href="./pages/service.html" class="btn-outline">Explore Services</a>
+                <a href="./pages/booking.html" class="btn-primary">Book Appointment</a>
+                <a href="./pages/service.html" class="btn-ghost">View Services</a>
             </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <strong>200+</strong>
-                    <span>Happy clients served</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>10+</strong>
-                    <span>Signature nail styles</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>7 Days</strong>
-                    <span>Weekly availability</span>
-                </div>
-            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat"><strong>200+</strong><span>Happy Clients</span></div>
+            <div class="hero-stat"><strong>10+</strong><span>Nail Styles</span></div>
+            <div class="hero-stat"><strong>7 Days</strong><span>Open Weekly</span></div>
         </div>
     </section>
 
-    <section class="glom-experience">
+    <!-- Why Us -->
+    <section class="why-us">
         <p class="section-tag">WHY CHOOSE US</p>
-        <h2>Why Clients Choose GLOM</h2>
-        <p class="section-sub">Professional service, attention to detail, and a beauty experience designed around comfort.</p>
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon pink"><i class="fa-solid fa-star"></i></div>
+        <h2>The GLOM Difference</h2>
+        <div class="pillars">
+            <div class="pillar">
+                <i class="fa-solid fa-star"></i>
                 <h4>Premium Quality</h4>
-                <p>Quality products for clean, lasting results.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon purple"><i class="fa-solid fa-palette"></i></div>
+            <div class="pillar">
+                <i class="fa-solid fa-palette"></i>
                 <h4>Expert Artists</h4>
-                <p>Skilled technicians with strong attention to detail.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon orange"><i class="fa-solid fa-clock"></i></div>
+            <div class="pillar">
+                <i class="fa-solid fa-clock"></i>
                 <h4>Flexible Hours</h4>
-                <p>Flexible appointments that fit your schedule.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon red"><i class="fa-solid fa-heart"></i></div>
-                <h4>Customer Care</h4>
-                <p>Friendly service tailored to every client.</p>
+            <div class="pillar">
+                <i class="fa-solid fa-heart"></i>
+                <h4>Personal Care</h4>
             </div>
         </div>
     </section>
 
-    <section class="popular-treatments">
+    <!-- Services -->
+    <section class="services">
         <p class="section-tag">OUR SERVICES</p>
         <h2>Signature Services</h2>
-        <p class="section-sub">Our most requested services for clean, stylish, and confident looks.</p>
-        <div class="treatments">
-            <div class="treatment">
-                <div class="treatment-img-wrap">
-                    <img src="./images/vd.jpg" alt="Gel Manicure">
-                    <span class="price-badge">GHS 45</span>
-                    <div class="treatment-body">
-                        <h4>Gel Manicure</h4>
-                        <p>Glossy color with a smooth, lasting finish.</p>
-                        <a href="./pages/service.html" class="learn-more">Learn More &rarr;</a>
-                    </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="./images/vd.jpg" alt="Gel Manicure">
+                <div class="service-info">
+                    <span class="service-price">GHS 45</span>
+                    <h4>Gel Manicure</h4>
+                    <a href="./pages/service.html">Learn More &rarr;</a>
                 </div>
             </div>
-            <div class="treatment">
-                <div class="treatment-img-wrap">
-                    <img src="./images/ba.jpg" alt="Acrylic Nails">
-                    <span class="price-badge">GHS 60</span>
-                    <div class="treatment-body">
-                        <h4>Acrylic Nails</h4>
-                        <p>Strong extensions shaped to your preferred look.</p>
-                        <a href="./pages/service.html" class="learn-more">Learn More &rarr;</a>
-                    </div>
+            <div class="service-card">
+                <img src="./images/ba.jpg" alt="Acrylic Nails">
+                <div class="service-info">
+                    <span class="service-price">GHS 60</span>
+                    <h4>Acrylic Nails</h4>
+                    <a href="./pages/service.html">Learn More &rarr;</a>
                 </div>
             </div>
-            <div class="treatment">
-                <div class="treatment-img-wrap">
-                    <img src="./images/TA.jpg" alt="Nail Art">
-                    <span class="price-badge">GHS 25+</span>
-                    <div class="treatment-body">
-                        <h4>Nail Art</h4>
-                        <p>Creative designs that make every set stand out.</p>
-                        <a href="./pages/service.html" class="learn-more">Learn More &rarr;</a>
-                    </div>
+            <div class="service-card">
+                <img src="./images/TA.jpg" alt="Nail Art">
+                <div class="service-info">
+                    <span class="service-price">GHS 25+</span>
+                    <h4>Nail Art</h4>
+                    <a href="./pages/service.html">Learn More &rarr;</a>
                 </div>
             </div>
         </div>
         <a href="./pages/service.html" class="btn-outline-pink">View All Services &rarr;</a>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
-        <h2>Ready for Your Next Appointment?</h2>
-        <p>Book today and enjoy professional nail care in a calm, elegant setting.</p>
-        <a href="./pages/booking.html" class="btn-outline-white">Schedule Your Appointment &rarr;</a>
+        <h2>Ready to Get Booked?</h2>
+        <p>Secure your spot today.</p>
+        <a href="./pages/booking.html" class="btn-cta">Book Now &rarr;</a>
     </section>
 
-    <section class="visit-section">
-        <div class="visit-layout">
-            <div class="visit-copy">
-                <p class="section-tag">VISIT OUR STUDIO</p>
+    <!-- Visit -->
+    <section class="visit">
+        <div class="visit-inner">
+            <div class="visit-info">
+                <p class="section-tag">FIND US</p>
                 <h2>Visit Our Studio</h2>
-                <p class="visit-text">Find our studio quickly and plan your visit with ease using the live location below.</p>
-                <div class="visit-details">
-                    <div class="visit-detail">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Alajo, Accra, Ghana</p>
-                        </div>
-                    </div>
-                    <div class="visit-detail">
-                        <i class="fa-solid fa-clock"></i>
-                        <div>
-                            <h4>Opening Hours</h4>
-                            <p>Mon-Sat: 9AM - 6PM | Sun: 10AM - 4PM</p>
-                        </div>
-                    </div>
+                <div class="visit-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div><h4>Address</h4><p>Alajo, Accra, Ghana</p></div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Alajo,+Accra,+Ghana" target="_blank" class="btn-location">Open Live Location</a>
+                <div class="visit-detail">
+                    <i class="fa-solid fa-clock"></i>
+                    <div><h4>Hours</h4><p>Mon–Sat: 9AM–6PM &nbsp;|&nbsp; Sun: 10AM–4PM</p></div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Alajo,+Accra,+Ghana" target="_blank" class="btn-location">Open in Maps</a>
             </div>
-            <div class="visit-map-wrap">
+            <div class="visit-map">
                 <iframe
-                    class="visit-map"
                     title="GLOM Nail Studio Location"
                     src="https://www.google.com/maps?q=Alajo,%20Accra,%20Ghana&output=embed"
                     loading="lazy"
@@ -196,8 +195,9 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo">
                     <span class="logo-icon">G</span>
@@ -206,7 +206,7 @@
                         <span class="logo-sub">Nail Studio</span>
                     </div>
                 </div>
-                <p>Elegant nail care, premium service, and confident results.</p>
+                <p>Elegant nail care, premium service, confident results.</p>
                 <div class="social-icons">
                     <a href="https://wa.me/233535250605" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="https://instagram.com/AMOHGLADYSASEIDUA" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -217,24 +217,24 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./pages/about.html">About</a></li>
                     <li><a href="./pages/service.html">Services</a></li>
                     <li><a href="./pages/gallary.html">Gallery</a></li>
                     <li><a href="./pages/pricing.html">Pricing</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <h4>Services</h4>
                 <ul>
                     <li>Manicure &amp; Pedicure</li>
                     <li>Gel Nails</li>
                     <li>Acrylic Nails</li>
-                    <li>Nail Art Design</li>
+                    <li>Nail Art</li>
                     <li>Spa Treatments</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Contact Us</h4>
+                <h4>Contact</h4>
                 <ul class="contact-list">
                     <li><i class="fa-solid fa-location-dot"></i> Alajo, Accra, Ghana</li>
                     <li><i class="fa-solid fa-phone"></i> +233535250605</li>
@@ -244,27 +244,33 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 GLOM Nail Studio. All rights reserved.</p>
-            <div class="footer-bottom-links">
+            <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
-                <a href="#">Designed with <i class="fa-solid fa-heart" style="color:#c80064"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/233535250605" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
+        // Mobile nav
         const toggle = document.getElementById('menuToggle');
         const nav = document.querySelector('.nav');
         toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+        // Welcome popup
+        const overlay = document.getElementById('welcomeOverlay');
+        function closeWelcome() { overlay.style.display = 'none'; }
+        document.getElementById('welcomeClose').addEventListener('click', closeWelcome);
+        document.getElementById('welcomeExplore').addEventListener('click', closeWelcome);
+        overlay.addEventListener('click', e => { if (e.target === overlay) closeWelcome(); });
     </script>
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
-        }
+        if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
     </script>
 </body>
 </html>
