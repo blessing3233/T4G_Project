@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../css/signup.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../icons/icon.svg">
+    <link rel="apple-touch-icon" href="../icons/icon.svg">
+    <meta name="theme-color" content="#c80064">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="GLOM">
 </head>
 <body class="signup-page">
 
@@ -106,6 +112,7 @@
             window.location.href = '../index.html';
         });
     </script>
+    <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js'); }</script>
 
 </body>
 </html>

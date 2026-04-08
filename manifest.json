@@ -1,0 +1,38 @@
+{
+  "name": "GLOM Nail Studio",
+  "short_name": "GLOM",
+  "description": "Elegant nail care for every occasion — Accra's premier nail studio",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#c80064",
+  "theme_color": "#c80064",
+  "orientation": "portrait",
+  "categories": ["beauty", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/fc.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "images/fc.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/F.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    }
+  ]
+}
