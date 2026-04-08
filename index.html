@@ -16,36 +16,6 @@
 </head>
 <body>
 
-    <!-- Welcome Popup -->
-    <div class="welcome-overlay" id="welcomeOverlay">
-        <div class="welcome-modal">
-            <div class="welcome-modal-top">
-                <div class="welcome-logo">
-                    <span class="wlogo-icon">G</span>
-                    <div>
-                        <span class="wlogo-main">GLOM</span>
-                        <span class="wlogo-sub">Nail Studio</span>
-                    </div>
-                </div>
-                <button class="welcome-close" id="welcomeClose" aria-label="Close" onclick="document.getElementById('welcomeOverlay').style.display='none'">&times;</button>
-            </div>
-            <div class="welcome-modal-body">
-                <p class="welcome-tag">✦ Accra's Premier Nail Studio ✦</p>
-                <h2>Welcome to <span class="welcome-highlight">GLOM</span></h2>
-                <p class="welcome-desc">Where every visit leaves you polished, confident, and glowing.</p>
-                <div class="welcome-perks">
-                    <span><i class="fa-solid fa-circle-check"></i> Premium products</span>
-                    <span><i class="fa-solid fa-circle-check"></i> Expert technicians</span>
-                    <span><i class="fa-solid fa-circle-check"></i> Open 7 days</span>
-                </div>
-                <div class="welcome-actions">
-                    <a href="./pages/booking.html" class="btn-welcome-book">Book Now &rarr;</a>
-                    <button class="btn-welcome-explore" id="welcomeExplore" onclick="document.getElementById('welcomeOverlay').style.display='none'">Explore First</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Top Bar -->
     <div class="topbar">
         <div class="topbar-left">
@@ -261,21 +231,6 @@
         const toggle = document.getElementById('menuToggle');
         const nav = document.querySelector('.nav');
         toggle.addEventListener('click', () => nav.classList.toggle('open'));
-
-        // Welcome popup - direct, no DOMContentLoaded needed (script is at bottom)
-        const overlay = document.getElementById('welcomeOverlay');
-        const closeBtn = document.getElementById('welcomeClose');
-        const exploreBtn = document.getElementById('welcomeExplore');
-
-        function closeWelcome() {
-            overlay.style.display = 'none';
-        }
-
-        closeBtn.onclick = closeWelcome;
-        exploreBtn.onclick = closeWelcome;
-        overlay.onclick = function(e) {
-            if (e.target === overlay) closeWelcome();
-        };
     </script>
     <script>
         if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js'); }
